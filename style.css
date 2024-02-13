@@ -80,6 +80,19 @@ h1{
 .hide {
   display: none;
 }
+/* Footer styles */
+footer {
+    background-color: #191913;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid #86B6F6; /* Add a border line at the top */
+    z-index: 999; /* Ensure footer is on top of other content */
+}
+
 
 @media screen and (max-width: 500px) {
     .msg-container{
