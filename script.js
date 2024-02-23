@@ -142,15 +142,26 @@ document.addEventListener("DOMContentLoaded", function() {
             let pos3Val = boxes[pattern[2]].innerText;
             if (pos1Val !== "" && pos2Val !== "" && pos3Val !== "") {
                 if (pos1Val === pos2Val && pos2Val === pos3Val) {
-                    showWinner(pos1Val === "O" ? player1 : player2);
-                    return true;
+                    // Check if Player 1 wins
+                    if (pos1Val === "O") {
+                        showWinner(player1);
+                        return true;
+                    }
+                    // If not Player 1, check if it's Player 2 (computer)
+                    else if (pos1Val === "X") {
+                        showWinner(player2);
+                        return true;
+                    }
                 }
             }
         }
         if (count === 9) {
             gameDraw();
+            return true;
         }
+        return false;
     };
+    
 
     boxes.forEach(box => {
         box.addEventListener("click", () => {
@@ -182,13 +193,13 @@ document.addEventListener("DOMContentLoaded", function() {
     newGameBtn.addEventListener("click", () => {
         sidebar.classList.remove("show-sidebar");
         resetGame();
-        resetPlayerNames();
         toggleBtn.style.display = "block";
     });
 
     resetBtn.addEventListener("click", () => {
         sidebar.classList.remove("show-sidebar");
         resetGame();
+        resetPlayerNames();
         toggleBtn.style.display = "block";
     });
 

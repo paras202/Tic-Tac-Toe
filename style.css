@@ -137,7 +137,7 @@ body {
 }
 
 /* Button styles */
-#start-game-btn{
+#reset-button{
     margin-top: 40px;
     padding: 0.8rem;
     font-size: 0.8rem;
@@ -149,7 +149,7 @@ body {
     margin-bottom: 0.8rem;
 }
 
-#reset-button,
+#start-game-btn,
 #new-btn {
     padding: 1rem;
     font-size: 1.25rem;
