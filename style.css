@@ -1,19 +1,111 @@
-*{
+/* Global styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #176B87;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
-.container{
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #176B87;
+    opacity: 90%;
+    transition: left 0.3s ease;
+    z-index: 998;
+}
+
+.sidebar-content{
+    padding-top: 80px;
+}
+
+.show-sidebar {
+    left: 0;
+}
+
+.side-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid #ffffc7;
+}
+
+.side-section input[type="text"],
+.side-section input[type="checkbox"],
+.side-section button {
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    color: #191913;
+    border: none;
+    border-radius: 5px; /* Add border radius for input and button */
+    cursor: pointer;
+}
+
+.side-section button:hover {
+    background-color: #86B6F6;
+}
+
+/* Toggle button styles */
+.toggle-btn {
+    position: fixed;
+    top: 5px;
+    left: 10px; /* Adjusted position */
+    background-color:  transparent;
+    font-size: 2rem;
+    color: #ffffc7;
+    font-weight: bolder;
+    border: none;
+    /* box-shadow: 0 0 0.5rem #B4D4FF; */
+    /* padding: 6px; */
+    cursor: pointer;
+    z-index: 999;
+}
+
+.cross-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #ffffc7;
+    font-size: larger;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    z-index: 111;
+}
+
+#cross-btn:hover {
+    background-color: #176B87;
+}
+
+.side-section label {
+    display: block;
+    margin-bottom: 20px;
+    color: #ffffc7;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.4rem;
+}
+
+/* Game container styles */
+.container {
     height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.game{
+
+.game {
     background-color: #86B6F6;
     box-shadow: 0 0 1rem #B4D4FF;
     width: 60vmin;
@@ -27,59 +119,78 @@ body{
     gap: 1.5%;
 }
 
-.box{
-    background-color: #EEF5FF;
+/* Game box styles */
+.box {
+    background-color: white;
     border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); /* Add box shadow */
     border: none;
     height: 18vmin;
     width: 18vmin;
     font-size: 8vmin;
     color: black;
+    transition: box-shadow 0.4s; 
 }
 
-#reset-button{
-    border-radius: 1rem;
-    padding: 1rem;
-    border: none;
-    box-shadow: 0 0 1rem #B4D4FF;
-    font-size: 1.25rem;
+.box:hover {
+    box-shadow: 0 0 1.5rem #176B87; 
+}
+
+/* Button styles */
+#start-game-btn{
+    margin-top: 40px;
+    padding: 0.8rem;
+    font-size: 0.8rem;
     background-color: #191913;
     color: #fff;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #B4D4FF;
+    margin-bottom: 0.8rem;
 }
 
+#reset-button,
 #new-btn {
     padding: 1rem;
     font-size: 1.25rem;
     background-color: #191913;
     color: #fff;
-    box-shadow: 0 0 1rem #B4D4FF;
-    border-radius: 1rem;
     border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #B4D4FF;
+    margin-bottom: 1rem;
 }
 
-h1{
-  color: #ffffc7;
-  font-size: 7vmin;
+#reset-button {
+    padding: 1rem;
+    font-size: 1.25rem;
 }
-  
+
+/* Text styles */
+h1 {
+    color: #ffffc7;
+    font-size: 7vmin;
+}
+
 #msg {
-  color: #ffffc7;
-  font-size: 6vmin;
+    color: #ffffc7;
+    font-size: 6vmin;
 }
-  
+
+/* Message container styles */
 .msg-container {
-  height: 100vmin;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 4rem;
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
 }
-  
+
 .hide {
-  display: none;
+    display: none;
 }
+
 /* Footer styles */
 footer {
     background-color: #191913;
@@ -89,24 +200,27 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    border-top: 2px solid #86B6F6; /* Add a border line at the top */
-    z-index: 999; /* Ensure footer is on top of other content */
+    border-top: 2px solid #86B6F6;
+    z-index: 999;
 }
 
-
+/* Media queries */
 @media screen and (max-width: 500px) {
     .msg-container{
         height: 100vmax;
     }
-    h1{
+
+    h1 {
         font-size: 10vmin;
     }
-    .game{
+
+    .game {
         height: 70vmin;
         width: 70vmin;
         display: flex;
     }
-    .box{
+
+    .box {
         height: 21vmin;
         width: 21vmin;
         font-size: 10vmin;

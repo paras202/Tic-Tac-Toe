@@ -7,10 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="sidebar" id="sidebar">
+        <button class="cross-btn" id="cross-btn">×</button>
+        <div class="sidebar-content">
+            <div class="side-section">
+                <label for="player1">Player 1 :</label>
+                <input type="text" id="player1" placeholder="Enter Player 1 Name">
+            </div>
+            <div class="side-section">
+                <label for="player2">Player 2 :</label>
+                <input type="text" id="player2" placeholder="Enter Player 2 Name">
+            </div>
+            <div class="side-section">
+                <input type="checkbox" id="comp-checkbox">
+                <label id="comp-checkbox">Play against computer</label>
+            </div>
+            <button id="start-game-btn">Start Game</button>
+        </div>
+    </div>
+    <button class="toggle-btn" id="toggle-btn">☰</button>
     <div class="msg-container hide">
         <p id="msg">Winner</p>
         <button id="new-btn">New Game</button>
-      </div>
+    </div>
     <main>
         <h1>Tic-Tac-Toe</h1>
         <div class="container">
