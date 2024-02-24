@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     resetBtn.addEventListener("click", () => {
-        sidebar.classList.remove("show-sidebar");
+        //sidebar.classList.remove("show-sidebar");
         resetGame();
         resetPlayerNames();
         toggleBtn.style.display = "block";
