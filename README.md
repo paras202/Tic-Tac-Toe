@@ -55,12 +55,29 @@ cd tic-tac-toe
 
 3. Open the `index.html` file in your web browser.
 
+## Game Controls
+
+### Start Button
+- Clicking the **Start Game** button initiates the Tic-Tac-Toe game.
+- Players can input their names and choose to play against another player or against the computer.
+- Once clicked, the game begins, and players take turns making moves.
+
+### Reset Button
+- Use the **Reset** button to start a fresh game at any time.
+- Resets the game board and allows players to start a new match without refreshing the page.
+- Player names and game mode selection are retained unless changed.
+
+### New Game Button
+- The **New Game** button allows players to reset the current game without starting a new one.
+- Clears the game board and resets the move count without changing player names or game mode selection.
+- Useful for undoing a move or starting over during an ongoing match.
+
 ## Usage
 
 - Start the game by entering player names (optional) and clicking the "Start Game" button.
 - Make moves by clicking on empty spaces in the grid.
 - Continue playing until one player wins or the game ends in a draw.
-- Use the "New Game" button to start a new game or the "Reset" button to reset the current game.
+- Use the "New Game" button to start a new game or the "Reset" button to reset the game and players.
 
 ## Contributing
 
