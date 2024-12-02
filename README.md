@@ -10,6 +10,7 @@ A simple Tic-Tac-Toe game implemented in HTML, CSS, and JavaScript.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [deployed](link)
 - [License](#license)
 
 ## Introduction
@@ -79,6 +80,10 @@ cd tic-tac-toe
 - Continue playing until one player wins or the game ends in a draw.
 - Use the "New Game" button to start a new game or the "Reset" button to reset the game and players.
 
+## Deployement
+
+- Link https://paras202.github.io/Tic-Tac-Toe/
+- 
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
